@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # "CLUB_LONG_NAME_CHANGE" 680 "Manchester United" ""
 
     # Menu selection
-    print("Choose your option: \n" + "1. Club Long Name\n" + "2. Club Short Name\n" + "3. Stadium Name")
+    print("Choose your option: \n" + "1. Club Long Name\n" + "2. Club Short Name\n" + "3. Stadium Name\n"+ "4. City Name Change\n")
     selection = input()
 
     # 1. Club Long Name
@@ -47,8 +47,18 @@ if __name__ == "__main__":
     if selection == "3":
             stnc = stringify("STADIUM_NAME_CHANGE")
             sid = input("Stadium ID: ")
-            stnm = stringify(input("Stadium Name Name: "))
+            stnm = stringify(input("Stadium Name: "))
             lang = stringify(" ")
 
             newfile.write(stnc + " " + sid + " " + stnm + " " + lang + '\n')
+            newfile.close()
+
+            # if statement - choose city name
+    if selection == "4":
+            ctnc = stringify("CITY_NAME_CHANGE")
+            cid = input("City ID: ")
+            ctnm = stringify(input("City Name: "))
+            lang = stringify(" ")
+
+            newfile.write(ctnc + " " + cid + " " + ctnm + " " + lang + '\n')
             newfile.close()
