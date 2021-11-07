@@ -8,8 +8,8 @@ if __name__ == "__main__":
     print(header)
 
     # Creates a new file
-    newfile = open("test1.lnc", "w")
-    newfile.write("# Created by " + header + "\n")
+    newfile = open("test1.lnc", "a")
+    # newfile.write("# Created by " + header + "\n")
     # newfile.close()
 
     # "CLUB_LONG_NAME_CHANGE" 680 "Manchester United" ""
@@ -26,5 +26,5 @@ if __name__ == "__main__":
             tmnm = stringify(input("Team Name: "))
             lang = stringify(" ")
 
-            newfile.write(clnc + " " + tid + " " + tmnm + " " + lang)
+            newfile.write(clnc + " " + tid + " " + tmnm + " " + lang + '\n')
             newfile.close()
